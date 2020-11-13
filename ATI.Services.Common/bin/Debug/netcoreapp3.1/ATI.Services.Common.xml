@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATI.Services.Common</name>
+    </assembly>
+    <members>
+        <member name="T:ATI.Services.Common.Behaviors.ActionStatus">
+            <summary>
+            Специфический статус действия с объектом. В случае успешного действия, ActionStatus = None.
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.Ok">
+            <summary>Операция успешно выполнена</summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.NoContent">
+            <summary>Запрашиваемый объект отсутствует.</summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.Forbidden">
+            <summary>У пользователя отсутствует разрешение на запрашиваемое действие с объектом.</summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.InternalServerError">
+            <summary>Внутренняя ошибка.</summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.NotFound">
+            <summary>
+            Данные не найдены
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.BadRequest">
+            <summary>
+            Неверные входные данные
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.ConstraintError">
+            <summary>
+            Не прошло ограничения БД
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.Timeout">
+            <summary>
+            Timeout
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.ModificationRestricted">
+            <summary>
+            Запрещено редактирование/удаление сущности из соображений бизнес логики.
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.Duplicates">
+            <summary>
+            Дубликат уже существующей в базе сущности.
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.SelfDuplicates">
+            <summary>
+            Дубликат уже существующей в базе у данной фирмы сущности.
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.LogicalError">
+            <summary>
+            Операция запрещена из соображений бизнес логики.
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.InternalOptionalServerUnavailable">
+            <summary>
+            Операция не выполнена, так как вышел из строя сервис, без которого можно работать
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.ExternalServerError">
+            <summary>
+            Ошибка внешнего поставщика данных
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.ExternalContractError">
+            <summary>
+            Ошибка контракта данных с внешним поставщиком
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.UnprocessableEntity">
+            <summary>
+            Имеется какая-то логическая ошибка, из-за которой невозможно произвести операцию над ресурсом
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.PaymentRequired">
+            <summary>
+            Недостаточно денег
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.ConfigurationError">
+            <summary>
+            Ошибка конфигурации
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.Unauthorized">
+            <summary>
+            Не авторизован
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.FullRegistrationRequired">
+            <summary>
+            Необходима полная регистрация
+            </summary>
+        </member>
+        <member name="F:ATI.Services.Common.Behaviors.ActionStatus.TooManyRequests">
+            <summary>
+            Превышено допустимая частота запросов
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.CommonBehavior.SetSerializer(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Устанавливает параметры сериализации. 
+            </summary>
+            <param name="jsonSerializerSettings"></param>
+        </member>
+        <member name="P:ATI.Services.Common.Behaviors.OperationError.ErrorMessage">
+            <summary>
+            Сообщение об ошибке
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationError.#ctor(ATI.Services.Common.Behaviors.ActionStatus,System.String,System.Boolean)">
+            <summary>
+            Создает экземпляр класса с сообщением об ошибке, переданным в параметре <paramref name="errorMessage"/>.
+            </summary>
+            <param name="status"></param>
+            <param name="errorMessage"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="P:ATI.Services.Common.Behaviors.OperationResult.Success">
+            <summary>
+            Возвращает или задает флаг, указывающий, успешно ли была выполнена операция.
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Behaviors.OperationResult.ActionStatus">
+            <summary>
+            Статус действия с объектом.
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationResult.DumpAllErrors">
+            <summary>
+            Выводит все сообщения об ошибках, разделенных пустой строкой.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ATI.Services.Common.Behaviors.OperationResult`1">
+            <summary>
+            Представляет результат операции вида TrySomething(), содержащий признак успешного завершения (<see cref="P:ATI.Services.Common.Behaviors.OperationResult.Success"/>) и значение <see cref="P:ATI.Services.Common.Behaviors.OperationResult`1.Value"/>.
+            </summary>
+            <typeparam name="TValue">Тип значения, возвращаемого операцией.</typeparam>
+        </member>
+        <member name="P:ATI.Services.Common.Behaviors.OperationResult`1.Success">
+            <summary>
+            Возвращает или задает флаг, указывающий, успешно ли была выполнена операция.
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Behaviors.OperationResult`1.Value">
+            <summary>
+            Возвращает или задает результат выполнения операции.
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationResult`1.#ctor(`0,ATI.Services.Common.Behaviors.ActionStatus,System.Boolean)">
+            <param name="value"></param>
+            <param name="actionStatus"></param>
+            <param name="useCountSuccessCondition">Success вернет false, если этот флаг установлен и <see cref="P:ATI.Services.Common.Behaviors.OperationResult`1.Value"/> .Count = 0</param>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationResult`1.#ctor(ATI.Services.Common.Behaviors.ActionStatus,System.Boolean)">
+            <param name="actionStatus"></param>
+            <param name="useCountSuccessCondition">Success вернет false, если этот флаг установлен и <see cref="P:ATI.Services.Common.Behaviors.OperationResult`1.Value"/> .Count = 0</param>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationResult`1.#ctor(System.String,`0,ATI.Services.Common.Behaviors.ActionStatus,System.Boolean,System.Boolean)">
+            <summary>
+            Создает экземпляр класса со значениями полей <see cref="P:ATI.Services.Common.Behaviors.OperationResult.Success"/> и <see cref="P:ATI.Services.Common.Behaviors.OperationResult`1.Value"/> , переданными в параметрах ,<param name="errorMessage"></param> и <paramref name="value"/> соответственно и добавляет ошибку <param name="errorMessage"/> в коллекцию ошибок/> .
+            </summary>
+            <param name="errorMessage"></param>
+            <param name="value"></param>
+            <param name="actionStatus"></param>
+            <param name="useCountSuccessCondition">Success вернет false, если этот флаг установлен и <see cref="P:ATI.Services.Common.Behaviors.OperationResult`1.Value"/> .Count = 0</param>
+        </member>
+        <member name="M:ATI.Services.Common.Behaviors.OperationResult`1.#ctor(ATI.Services.Common.Behaviors.ActionStatus,System.String,System.Boolean)">
+            <summary>
+            Создает экземпляр класса со значениями полей <see cref="P:ATI.Services.Common.Behaviors.OperationResult.Success"/> , переданными в параметрах <param name="errorMessage"></param>  соответственно и добавляет ошибку <param name="errorMessage"/> в коллекцию ошибок/> .
+            </summary>
+            <param name="errorMessage"></param>
+            <param name="actionStatus"></param>
+        </member>
+        <member name="M:ATI.Services.Common.Caching.MemoryCaching.MemoryCacheWrapper.KeyExists(System.String)">
+            <summary>
+            Возвращает два bool значения, для локального и shared кеша
+            как правило используется перед вставкой единичного значения в сет
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Caching.MemoryCaching.TwoLevelCache.KeyExistsAsync(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            Возвращает два bool значения, для локального и shared кеша
+            как правило используется перед вставкой единичного значения в сет
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Extensions.JsonSerializerExtensions.Serialize``1(Newtonsoft.Json.JsonSerializer,``0)">
+            <inheritdoc cref="M:Newtonsoft.Json.JsonSerializer.Serialize(System.IO.TextWriter,System.Object)"/>
+        </member>
+        <member name="M:ATI.Services.Common.Extensions.JsonSerializerExtensions.Deserialize``1(Newtonsoft.Json.JsonSerializer,System.Byte[])">
+            <summary>
+            Десериализует json, указанный в <paramref name="json"/> в объект типа <typeparamref name="T"/>.
+            </summary>
+            <param name="serializer"></param>
+            <param name="json"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ATI.Services.Common.Extensions.JsonSerializerExtensions.Deserialize``1(Newtonsoft.Json.JsonSerializer,System.String)">
+            <summary>
+            Десериализует json, указанный в <paramref name="json"/> в объект типа <typeparamref name="T"/>.
+            </summary>
+            <param name="serializer"></param>
+            <param name="json"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ATI.Services.Common.Extensions.JsonSerializerExtensions.ToJsonBytes``1(Newtonsoft.Json.JsonSerializer,``0)">
+            <summary>
+            Сериализует объект типа <typeparamref name="T"/> в массив байтов.
+            </summary>
+            <param name="serializer"></param>
+            <param name="model"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ATI.Services.Common.Extensions.StringExtension.TryConvert``1(System.String,``0@)">
+            <summary>
+            Пробует преобразовать строку тип <see cref="!:T"/>. Возвращает флаг, свидетельствующий об успешности преобразования.
+            Апасна, может что-нибудь и сломать, всегда использует ru_RU локаль.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="str"></param>
+            <param name="value">Преобразованное значение в случае успеха операции.</param>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParams.UrlTemplate">
+            <summary>
+            Шаблон урла, к примеру, /accounts/{0}. Используется в метриках
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParams.Url">
+            <summary>
+            Относительный путь к методу, например, /accounts/14612
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParams.MetricName">
+            <summary>
+            Название метрики
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParams.Parameters">
+            <summary>
+            Параметры запроса. Используются только для логирования
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParams.Headers">
+            <summary>
+            Дополнительные заголовки к запросу
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParamsWithBody`1.Body">
+            <summary>
+            Тело запроса
+            </summary>
+        </member>
+        <member name="T:ATI.Services.Common.Http.HttpRequestParamsWithRawContent">
+            <summary>
+            Если вам нужно отправить в качестве Content просто строку
+            На данный момент необходим в SMS Service.
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Http.HttpRequestParamsWithRawContent.RawContent">
+            <summary>
+            Не будет сериализоваться через JsonConvert.SerializeObject(), отправится как строка
+            </summary>
+        </member>
+        <member name="T:ATI.Services.Common.Initializers.Interfaces.IInitializer">
+            <summary>
+            Интерфейс который маркирует объект, как требующий инициализации на старте приложения
+            используется классом <see cref="T:ATI.Services.Common.Initializers.StartupInitializer"/>
+            для задания порядка инициализации используйте аттрибут <see cref="T:ATI.Services.Common.Initializers.InitializeOrderAttribute"/>
+            Имеющийся порядок на данный момент:
+            ATI.Services.Authorization.AuthorizationInitializer - InitializeOrder.First
+            <see cref="T:ATI.Services.Common.Tracing.TracingInitializer"/> -  InitializeOrder.First
+            <see cref="T:ATI.Services.Common.ServiceVariables.ServiceVariablesInitializer"/> -  InitializeOrder.First
+            <see cref="T:ATI.Services.Common.Initializers.MetricsInitializer"/> -  InitializeOrder.Second
+            <see cref="T:ATI.Services.Common.Initializers.RedisInitializer"/> -  InitializeOrder.Third
+            <see cref="T:ATI.Services.Common.Initializers.TwoLevelCacheInitializer"/> -  InitializeOrder.Third
+            <see cref="T:ATI.Services.Common.Caching.LocalCache.LocalCache`1"/> -  InitializeOrder.Fourth
+            ATI.Services.Consul.ConsulInitializer -  InitializeOrder.Sixth
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.MeasureAttribute.#ctor(System.String,System.Double)">
+            <summary>
+            Метрики метрики, метрики и трейсинг
+            </summary>
+            <param name="metricEntity">Имя метрики</param>
+            <param name="longRequestTimeSeconds">Время ответа после которого запрос считается достаточно долгим для логирования. В секундах</param>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.MetricsTimer.#ctor(Prometheus.Summary,System.String[],System.Nullable{System.TimeSpan},System.Object,System.Nullable{ATI.Services.Common.Logging.LogSource})">
+            <summary>
+            Конструктор таймера метрик, который считает только метрику (время выполнения + счётчик) для прометеуса
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.MetricsTracingFactory.ConcatLabelValues(System.String,System.String,System.String,System.String,System.String[])">
+            <summary>
+            Метод управляющий порядком значений лэйблов 
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.MetricsTracingFactory.ConcatLabelNames(System.String,System.String,System.String,System.String,System.String[])">
+            <summary>
+            Метод управляющий порядком названий лэйблов
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.MetricsTracingFactory.ConcatLabels(System.String,System.String,System.String,System.String,System.String,System.String[])">
+            <summary>
+            Метод управляющий порядком лэйблов и их значений
+            <param name="actionName"> Указывать только при объявлении лейблов. Записывается он в таймере, так как нужен для трейсинга</param>
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Metrics.TracingTimer.#ctor(zipkin4net.Trace,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Конструктор таймера метрик, который трейсит обращения к сервиса к внешним ресурсам
+            </summary>
+            <param name="trace"></param>
+            <param name="tracingServiceName"></param>
+            <param name="methodName"></param>
+            <param name="getTracingTagsCallback"></param>
+        </member>
+        <member name="P:ATI.Services.Common.Options.BaseServiceOptions.SecretKey">
+            <summary>
+            X-API-Secret Header Value
+            </summary>
+        </member>
+        <member name="M:ATI.Services.Common.Swagger.SwaggerExtensions.AddAtiSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions})">
+            <summary>
+            Добавляет Swagger
+            </summary>
+            <param name="services"></param>
+            <param name="additionalOptions">Дополнительные параметры</param>
+        </member>
+        <member name="P:ATI.Services.Common.Swagger.SwaggerOptions.ServiceName">
+            <summary>
+            Будет отображаться на странице сваггера
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Swagger.SwaggerOptions.ProjectsXmlNames">
+            <summary>
+            Массив. Заполнять значениями {ProjectName}.xml
+            Для начала нужно в .csproj, в секции PropertyGroup добавить элемент:
+            &lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
+            Если отправить null, то попытаемся получить список *.xml файлов из папки сервиса (работает в большинстве случаев)
+            </summary>
+        </member>
+        <member name="T:ATI.Services.Common.Tracing.TracingHttpClientWrapper">
+            <summary>
+            Для удобства лучше использовать ConsulMetricsHttpClientWrapper из ATI.Services.Consul
+            Он внутри себя инкапсулирует ConsulServiceAddress и MetricsTracingFactory
+            </summary>
+        </member>
+        <member name="P:ATI.Services.Common.Tracing.TracingOptions.MetricsServiceName">
+            <summary>
+            Название сервиса для метрик, без точек и прочих символов
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ATI.Services.Common" t="IncludeRecursive">
+        <e p="Api" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="ValidateModelStateAttribute.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ATI.Services.Common.csproj" t="IncludeRecursive" />
+        <e p="Behaviors" t="Include">
+          <e p="ActionStatus.cs" t="Include" />
+          <e p="ApiMessages.cs" t="Include" />
+          <e p="CommonBehavior.cs" t="Include" />
+          <e p="ConfigurationHelper.cs" t="Include" />
+          <e p="ConfigurationManager.cs" t="Include" />
+          <e p="ErrorResponse.cs" t="Include" />
+          <e p="ExtendedErrorResponse.cs" t="Include" />
+          <e p="FullErrorResponse.cs" t="Include" />
+          <e p="IPrivatePropertiesContainer.cs" t="Include" />
+          <e p="OperationBuilder" t="Include">
+            <e p="ActionBuilder.cs" t="Include" />
+            <e p="BaseActionBuilder.cs" t="Include" />
+            <e p="BaseFunctionBuilder.cs" t="Include" />
+            <e p="ConvertibleActionBuilder.cs" t="Include" />
+            <e p="Extensions" t="Include">
+              <e p="ActionBuilderExtensions.cs" t="Include" />
+              <e p="ConvertibleActionBuilderExtensions.cs" t="Include" />
+              <e p="GenericActionBuilderExtensions.cs" t="Include" />
+            </e>
+            <e p="GenericActionBuilder.cs" t="Include" />
+          </e>
+          <e p="OperationError.cs" t="Include" />
+          <e p="OperationResult.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Caching" t="Include">
+          <e p="KeyExistResult.cs" t="Include" />
+          <e p="LocalCache" t="Include">
+            <e p="ILocalCache.cs" t="Include" />
+            <e p="LocalCache.cs" t="Include" />
+          </e>
+          <e p="MemoryCaching" t="Include">
+            <e p="LocalCacheEvent.cs" t="Include" />
+            <e p="LocalCacheEventType.cs" t="Include" />
+            <e p="MemoryCacheOptions.cs" t="Include" />
+            <e p="MemoryCacheProvider.cs" t="Include" />
+            <e p="MemoryCacheWrapper.cs" t="Include" />
+            <e p="MemoryOptions.cs" t="Include" />
+            <e p="TwoLevelCache.cs" t="Include" />
+            <e p="TwoLevelCacheExtensions.cs" t="Include" />
+            <e p="TwoLevelCacheProvider.cs" t="Include" />
+          </e>
+          <e p="Redis" t="Include">
+            <e p="CacheHitRatioManager.cs" t="Include" />
+            <e p="CacheManagerOptions.cs" t="Include" />
+            <e p="HitRatioCounter.cs" t="Include" />
+            <e p="ICacheEntity.cs" t="Include" />
+            <e p="RedisCache.cs" t="Include" />
+            <e p="RedisExtensions.cs" t="Include" />
+            <e p="RedisOptions.cs" t="Include" />
+            <e p="RedisProvider.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="DictionaryExtension.cs" t="Include" />
+          <e p="JsonSerializerExtensions.cs" t="Include" />
+          <e p="ListExtensions.cs" t="Include" />
+          <e p="ModelStateExtensions.cs" t="Include" />
+          <e p="ServiceCollectionExtensions.cs" t="Include" />
+          <e p="StringExtension.cs" t="Include" />
+          <e p="TaskExtensions.cs" t="Include" />
+        </e>
+        <e p="Http" t="Include">
+          <e p="HttpRequestParams.cs" t="Include" />
+          <e p="HttpRequestParamsWithBody.cs" t="Include" />
+          <e p="HttpRequestParamsWithRawContent.cs" t="Include" />
+        </e>
+        <e p="Initializers" t="Include">
+          <e p="InitializeOrder.cs" t="Include" />
+          <e p="InitializeOrderAttribute.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IInitializer.cs" t="Include" />
+          </e>
+          <e p="MetricsInitializer.cs" t="Include" />
+          <e p="RedisInitializer.cs" t="Include" />
+          <e p="StartupInitializer.cs" t="Include" />
+          <e p="TwoLevelCacheInitializer.cs" t="Include" />
+        </e>
+        <e p="Logging" t="Include">
+          <e p="GlobalLoggingExtensions.cs" t="Include" />
+          <e p="LogEntity.cs" t="Include" />
+          <e p="LoggerExtension.cs" t="Include" />
+          <e p="LogHelper.cs" t="Include" />
+          <e p="LogSource.cs" t="Include" />
+        </e>
+        <e p="Metrics" t="Include">
+          <e p="MeasureAttribute.cs" t="Include" />
+          <e p="MetricsCollectionExtensions.cs" t="Include" />
+          <e p="MetricsConfig.cs" t="Include" />
+          <e p="MetricsExtensions.cs" t="Include" />
+          <e p="MetricsLogger.cs" t="Include" />
+          <e p="MetricsStatusCodeCounterMiddleware.cs" t="Include" />
+          <e p="MetricsTimer.cs" t="Include" />
+          <e p="MetricsTracingFactory.cs" t="Include" />
+          <e p="SystemMetricsCollector.cs" t="Include" />
+          <e p="TimersWrapper.cs" t="Include" />
+          <e p="TracingTimer.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ATI.Services.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Options" t="Include">
+          <e p="BaseServiceOptions.cs" t="Include" />
+        </e>
+        <e p="ServiceVariables" t="Include">
+          <e p="ServiceVariables.cs" t="Include" />
+          <e p="ServiceVariablesExtensions.cs" t="Include" />
+          <e p="ServiceVariablesInitializer.cs" t="Include" />
+          <e p="ServiceVariablesOptions.cs" t="Include" />
+        </e>
+        <e p="Slack" t="Include">
+          <e p="SlackAdapter.cs" t="Include" />
+          <e p="SlackAdapterOptions.cs" t="Include" />
+          <e p="SlackExtensions.cs" t="Include" />
+          <e p="SlackNotificationPayload.cs" t="Include" />
+          <e p="SlackProvider.cs" t="Include" />
+          <e p="SlackProviderOptions.cs" t="Include" />
+        </e>
+        <e p="Sql" t="Include">
+          <e p="DapperDb.cs" t="Include" />
+          <e p="DataBaseOptions.cs" t="Include" />
+          <e p="DbManagerOptions.cs" t="Include" />
+          <e p="DbProvider.cs" t="Include" />
+          <e p="EmptyFields.cs" t="Include" />
+          <e p="SqlExtensions.cs" t="Include" />
+        </e>
+        <e p="Swagger" t="Include">
+          <e p="ControllerWithOpenApi.cs" t="Include" />
+          <e p="SwaggerOptions.cs" t="Include" />
+          <e p="SwaggerTag.cs" t="Include" />
+          <e p="SwaggerTagAttribute.cs" t="Include" />
+        </e>
+        <e p="Tracing" t="Include">
+          <e p="HttpResponseMessage.cs" t="Include" />
+          <e p="TracedHttpClientConfig.cs" t="Include" />
+          <e p="TraceHelper.cs" t="Include" />
+          <e p="TracingHttpClientWrapper.cs" t="Include" />
+          <e p="TracingInitializer.cs" t="Include" />
+          <e p="TracingLogger.cs" t="Include" />
+          <e p="TracingMiddleware.cs" t="Include" />
+          <e p="TracingMiddlewareExtensions.cs" t="Include" />
+          <e p="TracingOptions.cs" t="Include" />
+          <e p="ZipkinLogTarget.cs" t="Include" />
+          <e p="ZipkinManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Common.Show.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_Common.Show.309776692.00" t="ExcludeRecursive" />
+  </component>
+</project>

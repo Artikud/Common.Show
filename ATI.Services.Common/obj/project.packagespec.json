@@ -1,0 +1,126 @@
+﻿{
+  "version": "7.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/artem/git/Common.Show/ATI.Services.Common/ATI.Services.Common.csproj",
+    "projectName": "ATI.Services.Common",
+    "projectPath": "/Users/artem/git/Common.Show/ATI.Services.Common/ATI.Services.Common.csproj",
+    "outputPath": "/Users/artem/git/Common.Show/ATI.Services.Common/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Dapper": {
+          "target": "Package",
+          "version": "[2.0.30, )"
+        },
+        "JetBrains.Annotations": {
+          "target": "Package",
+          "version": "[2020.1.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+          "target": "Package",
+          "version": "[3.1.2, )"
+        },
+        "Microsoft.Data.SqlClient": {
+          "target": "Package",
+          "version": "[1.1.1, )"
+        },
+        "Microsoft.Extensions.Caching.Memory": {
+          "target": "Package",
+          "version": "[3.1.2, )"
+        },
+        "Microsoft.Extensions.DependencyInjection.Abstractions": {
+          "target": "Package",
+          "version": "[3.1.3, )"
+        },
+        "NLog": {
+          "target": "Package",
+          "version": "[4.6.8, )"
+        },
+        "NLog.Web.AspNetCore": {
+          "target": "Package",
+          "version": "[4.9.0, )"
+        },
+        "Polly": {
+          "target": "Package",
+          "version": "[6.1.2, )"
+        },
+        "StackExchange.Redis": {
+          "target": "Package",
+          "version": "[2.0.519, )"
+        },
+        "Swashbuckle.AspNetCore": {
+          "target": "Package",
+          "version": "[5.5.1, )"
+        },
+        "Swashbuckle.AspNetCore.Newtonsoft": {
+          "target": "Package",
+          "version": "[5.5.1, )"
+        },
+        "prometheus-net": {
+          "target": "Package",
+          "version": "[2.1.3, )"
+        },
+        "zipkin4net": {
+          "target": "Package",
+          "version": "[1.3.0, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "downloadDependencies": [
+        {
+          "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+          "version": "[3.1.8, 3.1.8]"
+        },
+        {
+          "name": "Microsoft.NETCore.App.Host.linux-x64",
+          "version": "[3.1.8, 3.1.8]"
+        },
+        {
+          "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+          "version": "[3.1.8, 3.1.8]"
+        }
+      ],
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+    }
+  },
+  "runtimes": {
+    "linux-x64": {
+      "#import": []
+    }
+  }
+}
